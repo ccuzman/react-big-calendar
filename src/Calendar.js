@@ -281,6 +281,11 @@ class Calendar extends React.Component {
    scrollToTime: PropTypes.instanceOf(Date),
 
    /**
+    * Limit showing all the events for a day so the calendar will look good.
+    */
+   limitEvents: PropTypes.bool,
+
+   /**
     * Specify a specific culture code for the Calendar.
     *
     * **Note: it's generally better to handle this globally via your i18n library.**
@@ -437,6 +442,7 @@ class Calendar extends React.Component {
    elementProps: {},
    popup: false,
    toolbar: true,
+   limitEvents: true,
    view: views.MONTH,
    views: [views.MONTH, views.WEEK, views.DAY, views.AGENDA],
    date: now,

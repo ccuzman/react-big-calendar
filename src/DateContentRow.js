@@ -161,8 +161,10 @@ class DateContentRow extends React.Component {
       startAccessor,
       endAccessor
     }))
+    
+    let daysLimit = this.props.limitEvents ? Math.max(maxRows - 1, 1) : Infinity;
 
-    let { levels, extra } = eventLevels(segments, Math.max(maxRows - 1, 1));
+    let { levels, extra } = eventLevels(segments, daysLimit);
     while (levels.length < minRows ) levels.push([])
 
     return (

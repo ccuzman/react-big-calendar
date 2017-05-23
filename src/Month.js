@@ -155,6 +155,7 @@ class MonthView extends React.Component {
       eventPropGetter,
       messages,
       selected,
+      limitEvents,
     } = this.props
 
     const { needLimitMeasure, rowLimit } = this.state
@@ -172,6 +173,7 @@ class MonthView extends React.Component {
         events={events}
         maxRows={rowLimit}
         selected={selected}
+        limitEvents={limitEvents}
         selectable={selectable}
         messages={messages}
         titleAccessor={titleAccessor}
